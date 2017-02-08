@@ -27,7 +27,7 @@
     </dependencies>
 
     <build>
-        <finalName>example-module</finalName>
+        <finalName>${rootArtifactId}-module</finalName>
     </build>
 
 </project>

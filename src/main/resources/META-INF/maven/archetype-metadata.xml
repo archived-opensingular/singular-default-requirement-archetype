@@ -1,199 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<archetype-descriptor xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd" name="requerimento"
-    xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <modules>
-    <module id="lib" dir="lib" name="lib">
-      <modules>
-        <module id="${rootArtifactId}-comum" dir="__rootArtifactId__-comum" name="${rootArtifactId}-comum">
-          <fileSets>
-            <fileSet filtered="true" packaged="true" encoding="UTF-8">
-              <directory>src/main/java</directory>
-              <includes>
-                <include>**/*.java</include>
-              </includes>
-            </fileSet>
-            <fileSet filtered="true" encoding="UTF-8">
-              <directory>src/main/resources</directory>
-              <includes>
-                <include>**/*.properties</include>
-              </includes>
-            </fileSet>
-          </fileSets>
+<archetype-descriptor
+        xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"
+        name="requerimento"
+        xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <requiredProperties>
+        <requiredProperty key="capitalizedArtifactId">
+            <defaultValue>
+                ${artifactId.substring(0,1).toUpperCase()}${artifactId.substring(1)}
+            </defaultValue>
+        </requiredProperty>
+    </requiredProperties>
+    <modules>
+        <module id="lib" dir="lib" name="lib">
+            <modules>
+                <module id="${rootArtifactId}-comum" dir="__rootArtifactId__-comum" name="${rootArtifactId}-comum">
+                    <fileSets>
+                        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+                            <directory>src/main/java</directory>
+                            <includes>
+                                <include>**/*.java</include>
+                            </includes>
+                        </fileSet>
+                        <fileSet filtered="true" encoding="UTF-8">
+                            <directory>src/main/resources</directory>
+                            <includes>
+                                <include>**/*.properties</include>
+                            </includes>
+                        </fileSet>
+                    </fileSets>
+                </module>
+            </modules>
         </module>
-      </modules>
-    </module>
-    <module id="server" dir="server" name="server">
-      <fileSets>
-        <fileSet filtered="true" packaged="true" encoding="UTF-8">
-          <directory>src/main/java</directory>
-          <includes>
-            <include>**/*.java</include>
-          </includes>
-        </fileSet>
-        <fileSet filtered="true" encoding="UTF-8">
-          <directory>src/main/webapp</directory>
-          <includes>
-            <include>**/*.xml</include>
-            <include>**/*.html</include>
-          </includes>
-        </fileSet>
-      </fileSets>
-    </module>
-    <module id="${rootArtifactId}-static-resources" dir="static-resources" name="${rootArtifactId}-static-resources">
-      <fileSets>
-        <fileSet filtered="true" encoding="UTF-8">
-          <directory>src/main/webapp</directory>
-          <includes>
-            <include>**/*.xml</include>
-          </includes>
-        </fileSet>
-        <fileSet filtered="true" encoding="UTF-8">
-          <directory>overlays/org.opensingular.singular-ui-resources-1.5.7-SNAPSHOT</directory>
-          <includes>
-            <include>**/*.txt</include>
-            <include>**/*.xml</include>
-            <include>**/*.html</include>
-          </includes>
-        </fileSet>
-        <fileSet encoding="UTF-8">
-          <directory>overlays</directory>
-          <includes>
-            <include>**/*.info</include>
-          </includes>
-        </fileSet>
-        <fileSet encoding="UTF-8">
-          <directory>overlays/org.opensingular.singular-ui-resources-1.5.7-SNAPSHOT</directory>
-          <includes>
-            <include>**/*.</include>
-            <include>**/*.psd</include>
-            <include>**/*.cur</include>
-            <include>**/*.css</include>
-            <include>**/*.swf</include>
-            <include>**/*.gif</include>
-            <include>**/*.csv</include>
-            <include>**/*.js</include>
-            <include>**/*.eot</include>
-            <include>**/*.ico</include>
-            <include>**/*.sh</include>
-            <include>**/*.md</include>
-            <include>**/*.markdown</include>
-            <include>**/*.json</include>
-            <include>**/*.woff2</include>
-            <include>**/*.fla</include>
-            <include>**/*.jar</include>
-            <include>**/*.map</include>
-            <include>**/*.jpg</include>
-            <include>**/*.otf</include>
-            <include>**/*.svg</include>
-            <include>**/*.xap</include>
-            <include>**/*.ttf</include>
-            <include>**/*.png</include>
-            <include>**/*.less</include>
-            <include>**/*.woff</include>
-            <include>**/*.coffee</include>
-            <include>**/*.php</include>
-          </includes>
-        </fileSet>
-      </fileSets>
-    </module>
-    <module id="${rootArtifactId}-sso-analysis" dir="sso-analysis" name="${rootArtifactId}-sso-analysis">
-      <fileSets>
-        <fileSet filtered="true" encoding="UTF-8">
-          <directory>src/main/webapp</directory>
-          <includes>
-            <include>**/*.xml</include>
-          </includes>
-        </fileSet>
-        <fileSet filtered="true" encoding="UTF-8">
-          <directory>overlays/org.opensingular.singular-sso-desenv-analysis-1.5.7-SNAPSHOT</directory>
-          <includes>
-            <include>**/*.txt</include>
-            <include>**/*.jsp</include>
-            <include>**/*.xml</include>
-            <include>**/*.properties</include>
-          </includes>
-        </fileSet>
-        <fileSet encoding="UTF-8">
-          <directory>overlays</directory>
-          <includes>
-            <include>**/*.info</include>
-          </includes>
-        </fileSet>
-        <fileSet encoding="UTF-8">
-          <directory>overlays/org.opensingular.singular-sso-desenv-analysis-1.5.7-SNAPSHOT</directory>
-          <includes>
-            <include>**/*.</include>
-            <include>**/*.css</include>
-            <include>**/*.ico</include>
-            <include>**/*.gif</include>
-            <include>**/*.png</include>
-            <include>**/*.js</include>
-            <include>**/*.jar</include>
-            <include>**/*.class</include>
-          </includes>
-        </fileSet>
-      </fileSets>
-    </module>
-    <module id="${rootArtifactId}-sso-petition" dir="sso-petition" name="${rootArtifactId}-sso-petition">
-      <fileSets>
-        <fileSet filtered="true" encoding="UTF-8">
-          <directory>src/main/webapp</directory>
-          <includes>
-            <include>**/*.xml</include>
-          </includes>
-        </fileSet>
-        <fileSet filtered="true" encoding="UTF-8">
-          <directory>overlays/org.opensingular.singular-sso-desenv-petition-1.5.7-SNAPSHOT</directory>
-          <includes>
-            <include>**/*.txt</include>
-            <include>**/*.jsp</include>
-            <include>**/*.xml</include>
-            <include>**/*.properties</include>
-          </includes>
-        </fileSet>
-        <fileSet encoding="UTF-8">
-          <directory>overlays/org.opensingular.singular-sso-desenv-petition-1.5.7-SNAPSHOT</directory>
-          <includes>
-            <include>**/*.</include>
-            <include>**/*.css</include>
-            <include>**/*.ico</include>
-            <include>**/*.gif</include>
-            <include>**/*.png</include>
-            <include>**/*.js</include>
-            <include>**/*.jar</include>
-            <include>**/*.class</include>
-          </includes>
-        </fileSet>
-        <fileSet encoding="UTF-8">
-          <directory>overlays</directory>
-          <includes>
-            <include>**/*.info</include>
-          </includes>
-        </fileSet>
-      </fileSets>
-    </module>
-    <module id="example-module" dir="example-module" name="example-module">
-      <fileSets>
-        <fileSet filtered="true" packaged="true" encoding="UTF-8">
-          <directory>src/main/java</directory>
-          <includes>
-            <include>**/*.java</include>
-          </includes>
-        </fileSet>
-        <fileSet filtered="true" encoding="UTF-8">
-          <directory>src/main/webapp</directory>
-          <includes>
-            <include>**/*.xml</include>
-          </includes>
-        </fileSet>
-        <fileSet encoding="UTF-8">
-          <directory>src/main/resources</directory>
-          <includes>
-            <include>**/*.sql</include>
-          </includes>
-        </fileSet>
-      </fileSets>
-    </module>
-  </modules>
+        <module id="server" dir="server" name="server">
+            <fileSets>
+                <fileSet filtered="true" packaged="true" encoding="UTF-8">
+                    <directory>src/main/java</directory>
+                    <includes>
+                        <include>**/*.java</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory>src/main/webapp</directory>
+                    <includes>
+                        <include>**/*.xml</include>
+                        <include>**/*.html</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+        <module id="${rootArtifactId}-static-resources" dir="static-resources"
+                name="${rootArtifactId}-static-resources">
+            <fileSets>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory>src/main/webapp</directory>
+                    <includes>
+                        <include>**/*.xml</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+        <module id="${rootArtifactId}-sso-analysis" dir="sso-analysis" name="${rootArtifactId}-sso-analysis">
+            <fileSets>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory>src/main/webapp</directory>
+                    <includes>
+                        <include>**/*.xml</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+        <module id="${rootArtifactId}-sso-petition" dir="sso-petition" name="${rootArtifactId}-sso-petition">
+            <fileSets>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory>src/main/webapp</directory>
+                    <includes>
+                        <include>**/*.xml</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+        <module id="${rootArtifactId}-module" dir="__rootArtifactId__-module" name="${rootArtifactId}-module">
+            <fileSets>
+                <fileSet filtered="true" packaged="true" encoding="UTF-8">
+                    <directory>src/main/java</directory>
+                    <includes>
+                        <include>**/*.java</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory>src/main/webapp</directory>
+                    <includes>
+                        <include>**/*.xml</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory>src/main/resources</directory>
+                    <includes>
+                        <include>**/*.sql</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+    </modules>
 </archetype-descriptor>

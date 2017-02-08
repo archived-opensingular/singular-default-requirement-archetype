@@ -1,7 +1,7 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-package ${package}.examplemodule.flow;
+package ${package}.${rootArtifactId}module.flow;
 
 import org.opensingular.flow.core.DefinitionInfo;
 import org.opensingular.flow.core.FlowMap;
@@ -13,20 +13,20 @@ import org.opensingular.server.commons.flow.SingularServerTaskPageStrategy;
 import org.opensingular.server.module.wicket.view.util.form.FormPage;
 import org.opensingular.server.p.commons.flow.definition.SingularServerProcessDefinition;
 
-import static ${package}.examplemodule.flow.ExampleFlow.ExampleTasks.FIM;
-import static ${package}.examplemodule.flow.ExampleFlow.ExampleTasks.INICIO;
+import static ${package}.${rootArtifactId}module.flow.${capitalizedArtifactId}Flow.${capitalizedArtifactId}Tasks.FIM;
+import static ${package}.${rootArtifactId}module.flow.${capitalizedArtifactId}Flow.${capitalizedArtifactId}Tasks.INICIO;
 
-@DefinitionInfo("example")
-public class ExampleFlow extends SingularServerProcessDefinition<ProcessInstance> {
+@DefinitionInfo("${rootArtifactId}")
+public class ${capitalizedArtifactId}Flow extends SingularServerProcessDefinition<ProcessInstance> {
 
-    public enum ExampleTasks implements ITaskDefinition {
+    public enum ${capitalizedArtifactId}Tasks implements ITaskDefinition {
 
         INICIO("Início"),
         FIM("Fim");
 
         private String taskName;
 
-        ExampleTasks(String taskName) {
+        ${capitalizedArtifactId}Tasks(String taskName) {
             this.taskName = taskName;
         }
 
@@ -46,7 +46,7 @@ public class ExampleFlow extends SingularServerProcessDefinition<ProcessInstance
         }
     }
 
-    public ExampleFlow() {
+    public ${capitalizedArtifactId}Flow() {
         super(ProcessInstance.class);
     }
 

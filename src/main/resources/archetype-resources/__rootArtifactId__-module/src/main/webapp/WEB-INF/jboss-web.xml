@@ -3,10 +3,10 @@
 #set( $symbol_escape = '\' )
 <?xml version="1.0" encoding="UTF-8"?>
 <jboss-web>
-    <context-root>/examplemodule</context-root>
+    <context-root>/${rootArtifactId}module</context-root>
     <session-config>
         <cookie-config>
-            <path>/examplemodule</path>
+            <path>/${rootArtifactId}module</path>
         </cookie-config>
     </session-config>
 </jboss-web>

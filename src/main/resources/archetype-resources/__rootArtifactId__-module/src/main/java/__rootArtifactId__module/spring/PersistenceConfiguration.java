@@ -1,7 +1,7 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-package ${package}.examplemodule.spring;
+package ${package}.${rootArtifactId}module.spring;
 
 import org.opensingular.server.commons.spring.SingularDefaultPersistenceConfiguration;
 import org.springframework.beans.factory.annotation.Value;
@@ -14,13 +14,13 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 )
 public class PersistenceConfiguration extends SingularDefaultPersistenceConfiguration {
 
-    @Value("classpath:db/dml/insert-${artifactId}.sql")
-    private Resource exampleModule;
+    @Value("classpath:db/dml/insert-${rootArtifactId}-module.sql")
+    private Resource ${rootArtifactId}Module;
 
     @Override
     protected ResourceDatabasePopulator databasePopulator() {
         ResourceDatabasePopulator populator = super.databasePopulator();
-        populator.addScript(exampleModule);
+        populator.addScript(${rootArtifactId}Module);
         return populator;
     }
 

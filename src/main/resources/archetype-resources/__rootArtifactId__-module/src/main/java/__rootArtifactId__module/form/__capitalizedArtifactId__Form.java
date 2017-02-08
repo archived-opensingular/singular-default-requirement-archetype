@@ -1,7 +1,7 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-package ${package}.examplemodule.form;
+package ${package}.${rootArtifactId}module.form;
 
 import org.opensingular.form.SIComposite;
 import org.opensingular.form.SInfoType;
@@ -11,8 +11,8 @@ import org.opensingular.form.type.core.STypeString;
 import org.opensingular.form.view.SViewByBlock;
 
 
-@SInfoType(spackage = ExamplePackage.class, newable = true, name = "Requerimento")
-public class ExampleForm extends STypeComposite<SIComposite> {
+@SInfoType(spackage = ${capitalizedArtifactId}Package.class, newable = true, name = "Requerimento")
+public class ${capitalizedArtifactId}Form extends STypeComposite<SIComposite> {
 
     public STypeString nome;
 

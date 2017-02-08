@@ -1,11 +1,11 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-package ${package}.examplemodule.config;
+package ${package}.${rootArtifactId}module.config;
 
-import ${package}.examplemodule.form.ExampleForm;
-import ${package}.examplemodule.spring.PersistenceConfiguration;
-import ${package}.examplemodule.wicket.ExampleApplication;
+import ${package}.${rootArtifactId}module.form.${capitalizedArtifactId}Form;
+import ${package}.${rootArtifactId}module.spring.PersistenceConfiguration;
+import ${package}.${rootArtifactId}module.wicket.${capitalizedArtifactId}Application;
 import org.opensingular.flow.core.service.IFlowMetadataREST;
 import org.opensingular.form.SType;
 import org.opensingular.server.commons.config.IServerContext;
@@ -19,13 +19,13 @@ import org.opensingular.server.p.commons.flow.rest.DefaultPServerMetadataREST;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ExampleModuleInitializer implements PSingularInitializer {
+public class ${capitalizedArtifactId}ModuleInitializer implements PSingularInitializer {
 
     public PWebInitializer webConfiguration() {
         return new PWebInitializer() {
             @Override
             protected Class<? extends SingularApplication> getWicketApplicationClass(IServerContext iServerContext) {
-                return ExampleApplication.class;
+                return ${capitalizedArtifactId}Application.class;
             }
         };
     }
@@ -46,7 +46,7 @@ public class ExampleModuleInitializer implements PSingularInitializer {
             protected List<Class<? extends SType<?>>> getTypes() {
                 return new ArrayList<Class<? extends SType<?>>>() {
                     {
-                        add(ExampleForm.class);
+                        add(${capitalizedArtifactId}Form.class);
                     }
                 };
             }
@@ -69,12 +69,12 @@ public class ExampleModuleInitializer implements PSingularInitializer {
 
             @Override
             public String[] definitionsBasePackage() {
-                return new String[]{"${package}.examplemodule.flow"};
+                return new String[]{"${package}.${rootArtifactId}module.flow"};
             }
 
             @Override
             public String processGroupCod() {
-                return "EXAMPLEMODULE";
+                return "${rootArtifactId.toUpperCase()}MODULE";
             }
         };
     }

@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.opensingular</groupId>
-  <artifactId>requerimento-archetype</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <artifactId>singular-default-requirement-archetype</artifactId>
+  <version>1.5.8-SNAPSHOT</version>
   <packaging>maven-archetype</packaging>
 
-  <name>requerimento-archetype</name>
+  <name>singular-default-requirement-archetype</name>
 
   <build>
     <extensions>
