@@ -1,0 +1,14 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<jboss-deployment-structure>
+    <deployment>
+        <dependencies>
+            <module name="org.apache.log4j"/>
+        </dependencies>
+        <exclude-subsystems>
+            <subsystem name="weld"/>
+            <subsystem name="jsf" />
+        </exclude-subsystems>
+    </deployment>
+</jboss-deployment-structure>
