@@ -1,106 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <archetype-descriptor
-        xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"
-        name="requerimento"
-        xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <requiredProperties>
-        <requiredProperty key="capitalizedArtifactId">
-            <defaultValue>
-                ${artifactId.substring(0,1).toUpperCase()}${artifactId.substring(1)}
-            </defaultValue>
-        </requiredProperty>
-    </requiredProperties>
-    <modules>
-        <module id="lib" dir="lib" name="lib">
-            <modules>
-                <module id="${rootArtifactId}-comum" dir="__rootArtifactId__-comum" name="${rootArtifactId}-comum">
-                    <fileSets>
-                        <fileSet filtered="true" packaged="true" encoding="UTF-8">
-                            <directory>src/main/java</directory>
-                            <includes>
-                                <include>**/*.java</include>
-                            </includes>
-                        </fileSet>
-                        <fileSet filtered="true" encoding="UTF-8">
-                            <directory>src/main/resources</directory>
-                            <includes>
-                                <include>**/*.properties</include>
-                            </includes>
-                        </fileSet>
-                    </fileSets>
-                </module>
-            </modules>
+  xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"
+  name="requerimento"
+  xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <requiredProperties>
+    <requiredProperty key="modulePrefixName">
+      <defaultValue>
+        ${artifactId.replaceAll("[^a-zA-Z]","")}
+      </defaultValue>
+    </requiredProperty>
+    <requiredProperty key="modulePrefixClassName">
+      <defaultValue>
+        ${artifactId.replace("[^a-zA-Z]","").substring(0,1).toUpperCase()}${artifactId.replaceAll("[^a-zA-Z]","").substring(1)}
+      </defaultValue>
+    </requiredProperty>
+  </requiredProperties>
+  <modules>
+    <module id="lib" dir="lib" name="lib">
+      <modules>
+        <module id="${rootArtifactId}-comum" dir="__rootArtifactId__-comum" name="${rootArtifactId}-comum">
+          <fileSets>
+            <fileSet filtered="true" packaged="true" encoding="UTF-8">
+              <directory>src/main/java</directory>
+              <includes>
+                <include>**/*.java</include>
+              </includes>
+            </fileSet>
+            <fileSet filtered="true" encoding="UTF-8">
+              <directory>src/main/resources</directory>
+              <includes>
+                <include>**/*.properties</include>
+              </includes>
+            </fileSet>
+          </fileSets>
         </module>
-        <module id="server" dir="server" name="server">
-            <fileSets>
-                <fileSet filtered="true" packaged="true" encoding="UTF-8">
-                    <directory>src/main/java</directory>
-                    <includes>
-                        <include>**/*.java</include>
-                    </includes>
-                </fileSet>
-                <fileSet filtered="true" encoding="UTF-8">
-                    <directory>src/main/webapp</directory>
-                    <includes>
-                        <include>**/*.xml</include>
-                        <include>**/*.html</include>
-                    </includes>
-                </fileSet>
-            </fileSets>
-        </module>
-        <module id="${rootArtifactId}-static-resources" dir="static-resources"
-                name="${rootArtifactId}-static-resources">
-            <fileSets>
-                <fileSet filtered="true" encoding="UTF-8">
-                    <directory>src/main/webapp</directory>
-                    <includes>
-                        <include>**/*.xml</include>
-                    </includes>
-                </fileSet>
-            </fileSets>
-        </module>
-        <module id="${rootArtifactId}-sso-analysis" dir="sso-analysis" name="${rootArtifactId}-sso-analysis">
-            <fileSets>
-                <fileSet filtered="true" encoding="UTF-8">
-                    <directory>src/main/webapp</directory>
-                    <includes>
-                        <include>**/*.xml</include>
-                    </includes>
-                </fileSet>
-            </fileSets>
-        </module>
-        <module id="${rootArtifactId}-sso-petition" dir="sso-petition" name="${rootArtifactId}-sso-petition">
-            <fileSets>
-                <fileSet filtered="true" encoding="UTF-8">
-                    <directory>src/main/webapp</directory>
-                    <includes>
-                        <include>**/*.xml</include>
-                    </includes>
-                </fileSet>
-            </fileSets>
-        </module>
-        <module id="${rootArtifactId}-module" dir="__rootArtifactId__-module" name="${rootArtifactId}-module">
-            <fileSets>
-                <fileSet filtered="true" packaged="true" encoding="UTF-8">
-                    <directory>src/main/java</directory>
-                    <includes>
-                        <include>**/*.java</include>
-                    </includes>
-                </fileSet>
-                <fileSet filtered="true" encoding="UTF-8">
-                    <directory>src/main/webapp</directory>
-                    <includes>
-                        <include>**/*.xml</include>
-                    </includes>
-                </fileSet>
-                <fileSet filtered="true" encoding="UTF-8">
-                    <directory>src/main/resources</directory>
-                    <includes>
-                        <include>**/*.sql</include>
-                    </includes>
-                </fileSet>
-            </fileSets>
-        </module>
-    </modules>
+      </modules>
+    </module>
+    <module id="server" dir="server" name="server">
+      <fileSets>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/main/java</directory>
+          <includes>
+            <include>**/*.java</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+          <directory>src/main/webapp</directory>
+          <includes>
+            <include>**/*.xml</include>
+            <include>**/*.html</include>
+          </includes>
+        </fileSet>
+      </fileSets>
+    </module>
+    <module id="${rootArtifactId}-static-resources" dir="static-resources"
+      name="${rootArtifactId}-static-resources">
+      <fileSets>
+        <fileSet filtered="true" encoding="UTF-8">
+          <directory>src/main/webapp</directory>
+          <includes>
+            <include>**/*.xml</include>
+          </includes>
+        </fileSet>
+      </fileSets>
+    </module>
+    <module id="${rootArtifactId}-sso-analysis" dir="sso-analysis" name="${rootArtifactId}-sso-analysis">
+      <fileSets>
+        <fileSet filtered="true" encoding="UTF-8">
+          <directory>src/main/webapp</directory>
+          <includes>
+            <include>**/*.xml</include>
+          </includes>
+        </fileSet>
+      </fileSets>
+    </module>
+    <module id="${rootArtifactId}-sso-petition" dir="sso-petition" name="${rootArtifactId}-sso-petition">
+      <fileSets>
+        <fileSet filtered="true" encoding="UTF-8">
+          <directory>src/main/webapp</directory>
+          <includes>
+            <include>**/*.xml</include>
+          </includes>
+        </fileSet>
+      </fileSets>
+    </module>
+    <module id="${rootArtifactId}-module" dir="__rootArtifactId__-module" name="${rootArtifactId}-module">
+      <fileSets>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/main/java</directory>
+          <includes>
+            <include>**/*.java</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+          <directory>src/main/webapp</directory>
+          <includes>
+            <include>**/*.xml</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+          <directory>src/main/resources</directory>
+          <includes>
+            <include>**/*.sql</include>
+          </includes>
+        </fileSet>
+      </fileSets>
+    </module>
+  </modules>
 </archetype-descriptor>

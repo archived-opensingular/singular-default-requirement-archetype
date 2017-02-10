@@ -1,11 +1,11 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-package ${package}.${rootArtifactId}module.config;
+package ${package}.${modulePrefixName}module.config;
 
-import ${package}.${rootArtifactId}module.form.${capitalizedArtifactId}Form;
-import ${package}.${rootArtifactId}module.spring.PersistenceConfiguration;
-import ${package}.${rootArtifactId}module.wicket.${capitalizedArtifactId}Application;
+import ${package}.${modulePrefixName}module.form.${modulePrefixClassName}Form;
+import ${package}.${modulePrefixName}module.spring.PersistenceConfiguration;
+import ${package}.${modulePrefixName}module.wicket.${modulePrefixClassName}Application;
 import org.opensingular.flow.core.service.IFlowMetadataREST;
 import org.opensingular.form.SType;
 import org.opensingular.server.commons.config.IServerContext;
@@ -19,13 +19,13 @@ import org.opensingular.server.p.commons.flow.rest.DefaultPServerMetadataREST;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ${capitalizedArtifactId}ModuleInitializer implements PSingularInitializer {
+public class ${modulePrefixClassName}ModuleInitializer implements PSingularInitializer {
 
     public PWebInitializer webConfiguration() {
         return new PWebInitializer() {
             @Override
             protected Class<? extends SingularApplication> getWicketApplicationClass(IServerContext iServerContext) {
-                return ${capitalizedArtifactId}Application.class;
+                return ${modulePrefixClassName}Application.class;
             }
         };
     }
@@ -46,7 +46,7 @@ public class ${capitalizedArtifactId}ModuleInitializer implements PSingularIniti
             protected List<Class<? extends SType<?>>> getTypes() {
                 return new ArrayList<Class<? extends SType<?>>>() {
                     {
-                        add(${capitalizedArtifactId}Form.class);
+                        add(${modulePrefixClassName}Form.class);
                     }
                 };
             }
@@ -69,12 +69,12 @@ public class ${capitalizedArtifactId}ModuleInitializer implements PSingularIniti
 
             @Override
             public String[] definitionsBasePackage() {
-                return new String[]{"${package}.${rootArtifactId}module.flow"};
+                return new String[]{"${package}.${modulePrefixName}module.flow"};
             }
 
             @Override
             public String processGroupCod() {
-                return "${rootArtifactId.toUpperCase()}MODULE";
+                return "${modulePrefixName.toUpperCase()}MODULE";
             }
         };
     }
