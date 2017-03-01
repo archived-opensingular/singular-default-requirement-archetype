@@ -27,8 +27,8 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jdk.version>1.8</jdk.version>
-        <singular.server.version>1.5.8-SNAPSHOT</singular.server.version>
-        <singular.version>1.5.8-SNAPSHOT</singular.version>
+        <singular.server.version>1.5.11</singular.server.version>
+        <singular.version>1.5.11</singular.version>
         <wicket.version>7.1.0</wicket.version>
         <hibernate.version>4.3.11.Final</hibernate.version>
         <spring.version>4.2.4.RELEASE</spring.version>

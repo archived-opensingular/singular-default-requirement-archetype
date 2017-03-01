@@ -4,7 +4,7 @@
 
   <groupId>org.opensingular</groupId>
   <artifactId>singular-default-requirement-archetype</artifactId>
-  <version>1.5.8-SNAPSHOT</version>
+  <version>1.5.11</version>
   <packaging>maven-archetype</packaging>
 
   <name>singular-default-requirement-archetype</name>
