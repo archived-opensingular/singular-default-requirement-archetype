@@ -1,0 +1,11 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<component name="ArtifactManager">
+  <artifact type="war" name="${artifactId}-sso-petition:war">
+    <output-path>${symbol_dollar}PROJECT_DIR${symbol_dollar}/sso-petition/target</output-path>
+    <root id="archive" name="sso${symbol_pound}petition.war">
+      <element id="artifact" artifact-name="${artifactId}-sso-petition:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,19 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="${artifactId}-sso-analysis:war exploded">
+    <output-path>${symbol_dollar}PROJECT_DIR${symbol_dollar}/sso-analysis/target/sso${symbol_pound}analysis</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="${artifactId}-sso-analysis" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="${symbol_dollar}PROJECT_DIR${symbol_dollar}/sso-analysis/target/sso${symbol_pound}analysis/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="${artifactId}-sso-analysis/web/Web" />
+    </root>
+  </artifact>
+</component>

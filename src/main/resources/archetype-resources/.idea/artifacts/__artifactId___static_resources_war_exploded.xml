@@ -1,0 +1,19 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="${artifactId}-static-resources:war exploded">
+    <output-path>${symbol_dollar}PROJECT_DIR${symbol_dollar}/static-resources/target/singular-static</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="${artifactId}-static-resources" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="${symbol_dollar}PROJECT_DIR${symbol_dollar}/static-resources/target/singular-static/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="${artifactId}-static-resources/web/Web" />
+    </root>
+  </artifact>
+</component>

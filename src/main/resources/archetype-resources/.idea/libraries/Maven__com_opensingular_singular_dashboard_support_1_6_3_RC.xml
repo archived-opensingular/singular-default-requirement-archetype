@@ -1,0 +1,16 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<component name="libraryTable">
+  <library name="Maven: com.opensingular:singular-dashboard-support:1.6.3-RC">
+    <CLASSES>
+      <root url="jar://${symbol_dollar}MAVEN_REPOSITORY${symbol_dollar}/com/opensingular/singular-dashboard-support/1.6.3-RC/singular-dashboard-support-1.6.3-RC.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://${symbol_dollar}MAVEN_REPOSITORY${symbol_dollar}/com/opensingular/singular-dashboard-support/1.6.3-RC/singular-dashboard-support-1.6.3-RC-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://${symbol_dollar}MAVEN_REPOSITORY${symbol_dollar}/com/opensingular/singular-dashboard-support/1.6.3-RC/singular-dashboard-support-1.6.3-RC-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

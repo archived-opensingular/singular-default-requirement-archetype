@@ -1,0 +1,18 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://${symbol_dollar}PROJECT_DIR${symbol_dollar}/${artifactId}.iml" filepath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/${artifactId}.iml" />
+      <module fileurl="file://${symbol_dollar}PROJECT_DIR${symbol_dollar}/${artifactId}-module/${artifactId}-module.iml" filepath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/${artifactId}-module/${artifactId}-module.iml" />
+      <module fileurl="file://${symbol_dollar}PROJECT_DIR${symbol_dollar}/${artifactId}-server/${artifactId}-server.iml" filepath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/${artifactId}-server/${artifactId}-server.iml" />
+      <module fileurl="file://${symbol_dollar}PROJECT_DIR${symbol_dollar}/sso-analysis/${artifactId}-sso-analysis.iml" filepath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/sso-analysis/${artifactId}-sso-analysis.iml" />
+      <module fileurl="file://${symbol_dollar}PROJECT_DIR${symbol_dollar}/sso-petition/${artifactId}-sso-petition.iml" filepath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/sso-petition/${artifactId}-sso-petition.iml" />
+      <module fileurl="file://${symbol_dollar}PROJECT_DIR${symbol_dollar}/static-resources/${artifactId}-static-resources.iml" filepath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/static-resources/${artifactId}-static-resources.iml" />
+      <module fileurl="file://${symbol_dollar}PROJECT_DIR${symbol_dollar}/dashboard/dashboard.iml" filepath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/dashboard/dashboard.iml" />
+      <module fileurl="file://${symbol_dollar}PROJECT_DIR${symbol_dollar}/dashboard/dashboard.iml" filepath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/dashboard/dashboard.iml" />
+    </modules>
+  </component>
+</project>

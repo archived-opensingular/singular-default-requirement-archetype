@@ -1,0 +1,15 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://${symbol_dollar}PROJECT_DIR${symbol_dollar}" charset="UTF-8" />
+    <file url="file://${symbol_dollar}PROJECT_DIR${symbol_dollar}/${artifactId}-module" charset="UTF-8" />
+    <file url="file://${symbol_dollar}PROJECT_DIR${symbol_dollar}/${artifactId}-server" charset="UTF-8" />
+    <file url="file://${symbol_dollar}PROJECT_DIR${symbol_dollar}/dashboard" charset="UTF-8" />
+    <file url="file://${symbol_dollar}PROJECT_DIR${symbol_dollar}/sso-analysis" charset="UTF-8" />
+    <file url="file://${symbol_dollar}PROJECT_DIR${symbol_dollar}/sso-petition" charset="UTF-8" />
+    <file url="file://${symbol_dollar}PROJECT_DIR${symbol_dollar}/static-resources" charset="UTF-8" />
+  </component>
+</project>

@@ -1,0 +1,103 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="EntryPointsManager">
+    <entry_points version="2.0" />
+  </component>
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file url="file://${symbol_dollar}PROJECT_DIR${symbol_dollar}/dashboard/overlays" />
+    <file url="file://${symbol_dollar}PROJECT_DIR${symbol_dollar}/sso-analysis/overlays" />
+    <file url="file://${symbol_dollar}PROJECT_DIR${symbol_dollar}/sso-petition/overlays" />
+    <file url="file://${symbol_dollar}PROJECT_DIR${symbol_dollar}/static-resources/overlays" />
+    <file type="web" url="file://${symbol_dollar}PROJECT_DIR${symbol_dollar}/${artifactId}-module" />
+    <file type="web" url="file://${symbol_dollar}PROJECT_DIR${symbol_dollar}/${artifactId}-server" />
+    <file type="web" url="file://${symbol_dollar}PROJECT_DIR${symbol_dollar}/dashboard" />
+    <file type="web" url="file://${symbol_dollar}PROJECT_DIR${symbol_dollar}/sso-analysis" />
+    <file type="web" url="file://${symbol_dollar}PROJECT_DIR${symbol_dollar}/sso-petition" />
+    <file type="web" url="file://${symbol_dollar}PROJECT_DIR${symbol_dollar}/static-resources" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="${symbol_dollar}PROJECT_DIR${symbol_dollar}/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://${symbol_dollar}PROJECT_DIR${symbol_dollar}/out" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>actioncable-5.0.0.rc1 (v5.0.0.rc1, RVM: ruby-2.3.1 [global] (1)) [gem]</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.6</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

@@ -1,0 +1,16 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<component name="libraryTable">
+  <library name="Maven: org.opensingular:singular-server-commons:test-jar:tests:1.6.3-RC">
+    <CLASSES>
+      <root url="jar://${symbol_dollar}MAVEN_REPOSITORY${symbol_dollar}/org/opensingular/singular-server-commons/1.6.3-RC/singular-server-commons-1.6.3-RC-tests.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://${symbol_dollar}MAVEN_REPOSITORY${symbol_dollar}/org/opensingular/singular-server-commons/1.6.3-RC/singular-server-commons-1.6.3-RC-test-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://${symbol_dollar}MAVEN_REPOSITORY${symbol_dollar}/org/opensingular/singular-server-commons/1.6.3-RC/singular-server-commons-1.6.3-RC-test-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

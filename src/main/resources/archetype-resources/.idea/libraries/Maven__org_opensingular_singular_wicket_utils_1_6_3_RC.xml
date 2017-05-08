@@ -1,0 +1,16 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<component name="libraryTable">
+  <library name="Maven: org.opensingular:singular-wicket-utils:1.6.3-RC">
+    <CLASSES>
+      <root url="jar://${symbol_dollar}MAVEN_REPOSITORY${symbol_dollar}/org/opensingular/singular-wicket-utils/1.6.3-RC/singular-wicket-utils-1.6.3-RC.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://${symbol_dollar}MAVEN_REPOSITORY${symbol_dollar}/org/opensingular/singular-wicket-utils/1.6.3-RC/singular-wicket-utils-1.6.3-RC-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://${symbol_dollar}MAVEN_REPOSITORY${symbol_dollar}/org/opensingular/singular-wicket-utils/1.6.3-RC/singular-wicket-utils-1.6.3-RC-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
