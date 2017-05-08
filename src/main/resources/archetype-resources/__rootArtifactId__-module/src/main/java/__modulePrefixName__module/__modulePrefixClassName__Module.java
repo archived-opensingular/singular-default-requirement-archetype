@@ -22,7 +22,7 @@ public class ${modulePrefixClassName}Module implements SingularModule {
 
     @Override
     public String category() {
-        return ANTAQ;
+        return ${moduleConstant};
     }
 
     @Override

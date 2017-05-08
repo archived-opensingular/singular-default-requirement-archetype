@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.opensingular</groupId>
-  <artifactId>singular-POC-requirement-archetype</artifactId>
+  <artifactId>singular-poc-requirement-archetype</artifactId>
   <version>1.6.3</version>
   <packaging>maven-archetype</packaging>
 
-  <name>singular-default-requirement-archetype</name>
+  <name>singular-poc-requirement-archetype</name>
 
   <build>
     <extensions>
