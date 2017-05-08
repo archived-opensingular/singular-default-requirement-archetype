@@ -22,7 +22,7 @@
     </dependencies>
 
     <build>
-        <finalName>antaq-server</finalName>
+        <finalName>${modulePrefixName}-server</finalName>
     </build>
 
 </project>

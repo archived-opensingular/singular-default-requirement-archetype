@@ -34,7 +34,7 @@
     </dependencies>
 
     <build>
-        <finalName>antaq-module</finalName>
+        <finalName>${modulePrefixName}-module</finalName>
     </build>
 
 </project>

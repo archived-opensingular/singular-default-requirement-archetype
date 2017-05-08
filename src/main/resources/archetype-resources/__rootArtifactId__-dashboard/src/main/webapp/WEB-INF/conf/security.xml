@@ -10,10 +10,10 @@
                            http://www.springframework.org/schema/security
                            http://www.springframework.org/schema/security/spring-security-4.0.xsd">
 
-    <bean name="cnmUserDetailsService" class="${package}.${artifactId}.security.security.DashboardUserDetailsService" />
+    <bean name="dashboardUserDetailsService" class="${package}.${modulePrefixName}.security.security.DashboardUserDetailsService" />
 
     <security:authentication-manager alias="authenticationManager">
-        <security:authentication-provider user-service-ref="cnmUserDetailsService"/>
+        <security:authentication-provider user-service-ref="dashboardUserDetailsService"/>
     </security:authentication-manager>
 
     <security:http auto-config="false">
@@ -25,7 +25,7 @@
         <security:intercept-url pattern="/**" access="hasRole('ROLE_USER')"/>
         <security:form-login login-page="/login"
                              always-use-default-target="false"
-                             default-target-url="/${artifactId}"
+                             default-target-url="/dashboard"
                              authentication-failure-url="/login?error=true"/>
         <security:logout logout-url="/logout"/>
     </security:http>

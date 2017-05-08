@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<archetype-descriptor xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd" name="antaq"
+<archetype-descriptor xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd" name="singular"
     xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
      <requiredProperties>
@@ -10,7 +10,7 @@
     </requiredProperty>
     <requiredProperty key="modulePrefixName">
       <defaultValue>
-        ${artifactId.replaceAll("[^a-zA-Z]","")}
+        ${artifactId.replaceAll("[^a-zA-Z]","").toLowerCase()}
       </defaultValue>
     </requiredProperty>
     <requiredProperty key="modulePrefixClassName">
@@ -44,14 +44,6 @@
       </fileSets>
     </module>
     <module id="${rootArtifactId}-static-resources" dir="__rootArtifactId__-static-resources" name="${rootArtifactId}-static-resources">
-      <fileSets>
-        <fileSet encoding="UTF-8">
-          <directory></directory>
-          <includes>
-            <include>antaq-static-resources.iml</include>
-          </includes>
-        </fileSet>
-      </fileSets>
     </module>
     <module id="${rootArtifactId}-sso-analysis" dir="__rootArtifactId__-sso-analysis" name="${rootArtifactId}-sso-analysis">
       <fileSets>
