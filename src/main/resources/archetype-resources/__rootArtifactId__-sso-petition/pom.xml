@@ -16,20 +16,14 @@
     <dependencies>
         <dependency>
             <groupId>org.opensingular</groupId>
-            <artifactId>singular-server-module</artifactId>
+            <artifactId>singular-sso-desenv-petition</artifactId>
             <version>${singular.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.opensingular</groupId>
-            <artifactId>singular-server-commons</artifactId>
-            <version>${singular.version}</version>
-            <type>test-jar</type>
-            <scope>test</scope>
+            <type>war</type>
         </dependency>
     </dependencies>
 
     <build>
-        <finalName>${modulePrefixName}-module</finalName>
+        <finalName>sso#petition</finalName>
     </build>
 
 </project>

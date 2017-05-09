@@ -10,6 +10,7 @@
     <name>[projeto-raiz :: ${artifactId}]</name>
     <packaging>pom</packaging>
 
+
     <build>
         <plugins>
             <plugin>
@@ -24,16 +25,25 @@
         </plugins>
     </build>
 
+    <dependencies>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jdk.version>1.8</jdk.version>
-        <singular.server.version>1.5.11</singular.server.version>
-        <singular.version>1.5.11</singular.version>
+        <singular.version>1.6.3</singular.version>
         <wicket.version>7.1.0</wicket.version>
         <hibernate.version>4.3.11.Final</hibernate.version>
         <spring.version>4.2.4.RELEASE</spring.version>
         <spring.security.version>4.0.3.RELEASE</spring.security.version>
         <sonar.exclusions>**/*.js, **/*.css</sonar.exclusions>
+        <failOnMissingWebXml>false</failOnMissingWebXml>
     </properties>
 
 </project>

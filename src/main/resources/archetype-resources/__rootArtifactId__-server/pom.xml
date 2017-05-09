@@ -10,26 +10,19 @@
     </parent>
 
     <artifactId>${artifactId}</artifactId>
-    <name>[requerimento :: ${artifactId}]</name>
+    <name>[requerimento :: ${parentArtifactId}-server]</name>
     <packaging>war</packaging>
 
     <dependencies>
         <dependency>
             <groupId>org.opensingular</groupId>
-            <artifactId>singular-server-module</artifactId>
+            <artifactId>singular-server-core</artifactId>
             <version>${singular.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.opensingular</groupId>
-            <artifactId>singular-server-commons</artifactId>
-            <version>${singular.version}</version>
-            <type>test-jar</type>
-            <scope>test</scope>
         </dependency>
     </dependencies>
 
     <build>
-        <finalName>${modulePrefixName}-module</finalName>
+        <finalName>${modulePrefixName}-server</finalName>
     </build>
 
 </project>
