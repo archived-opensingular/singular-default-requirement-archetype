@@ -10,8 +10,8 @@ import org.opensingular.form.TypeBuilder;
 import org.opensingular.form.type.core.STypeString;
 import org.opensingular.form.view.SViewByBlock;
 
-@SInfoType(spackage = ${modulePrefixClassName}Package.class, name = "${modulePrefixClassName}")
-public class ${modulePrefixClassName}Form extends STypeComposite<SIComposite> {
+@SInfoType(spackage = ${moduleClassNamePrefix}Package.class, name = "${moduleClassNamePrefix}")
+public class ${moduleClassNamePrefix}Form extends STypeComposite<SIComposite> {
 
     public STypeString nome;
 

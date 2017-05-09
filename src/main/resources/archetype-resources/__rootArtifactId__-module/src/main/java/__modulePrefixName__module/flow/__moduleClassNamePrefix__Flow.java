@@ -3,7 +3,7 @@
 #set( $symbol_escape = '\' )
 package ${package}.${modulePrefixName}module.flow;
 
-import ${package}.${modulePrefixName}module.${modulePrefixClassName}Module;
+import ${package}.${modulePrefixName}module.${moduleClassNamePrefix}Module;
 import org.opensingular.flow.core.DefinitionInfo;
 import org.opensingular.flow.core.ITaskDefinition;
 import org.opensingular.flow.core.ProcessInstance;
@@ -15,15 +15,15 @@ import org.opensingular.server.p.commons.flow.definition.ServerProcessDefinition
 
 import javax.annotation.Nonnull;
 
-import static ${package}.${modulePrefixName}module.flow.${modulePrefixClassName}Flow.${modulePrefixClassName}Tasks.ANALISAR;
-import static ${package}.${modulePrefixName}module.flow.${modulePrefixClassName}Flow.${modulePrefixClassName}Tasks.APROVADO;
-import static ${package}.${modulePrefixName}module.flow.${modulePrefixClassName}Flow.${modulePrefixClassName}Tasks.REPROVADO;
+import static ${package}.${modulePrefixName}module.flow.${moduleClassNamePrefix}Flow.${moduleClassNamePrefix}Tasks.ANALISAR;
+import static ${package}.${modulePrefixName}module.flow.${moduleClassNamePrefix}Flow.${moduleClassNamePrefix}Tasks.APROVADO;
+import static ${package}.${modulePrefixName}module.flow.${moduleClassNamePrefix}Flow.${moduleClassNamePrefix}Tasks.REPROVADO;
 
 
 @DefinitionInfo("${modulePrefixName}")
-public class ${modulePrefixClassName}Flow extends ServerProcessDefinition<ProcessInstance> {
+public class ${moduleClassNamePrefix}Flow extends ServerProcessDefinition<ProcessInstance> {
 
-    public enum ${modulePrefixClassName}Tasks implements ITaskDefinition {
+    public enum ${moduleClassNamePrefix}Tasks implements ITaskDefinition {
 
         ANALISAR("Analisar"),
         APROVADO("Aprovado"),
@@ -31,7 +31,7 @@ public class ${modulePrefixClassName}Flow extends ServerProcessDefinition<Proces
 
         private String taskName;
 
-        ${modulePrefixClassName}Tasks(String taskName) {
+        ${moduleClassNamePrefix}Tasks(String taskName) {
             this.taskName = taskName;
         }
 
@@ -51,9 +51,9 @@ public class ${modulePrefixClassName}Flow extends ServerProcessDefinition<Proces
         }
     }
 
-    public ${modulePrefixClassName}Flow() {
+    public ${moduleClassNamePrefix}Flow() {
         super(ProcessInstance.class);
-        this.setName(${modulePrefixClassName}Module.${moduleConstant}, "${modulePrefixClassName}");
+        this.setName(${moduleClassNamePrefix}Module.${moduleStringIDName}, "${moduleClassNamePrefix}");
 
     }
 

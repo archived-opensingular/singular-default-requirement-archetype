@@ -3,7 +3,7 @@
     xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
      <requiredProperties>
-     <requiredProperty key="moduleConstant">
+     <requiredProperty key="moduleStringIDName">
       <defaultValue>
         ${artifactId.replaceAll("[^a-zA-Z]","").toUpperCase()}
       </defaultValue>
@@ -13,7 +13,7 @@
         ${artifactId.replaceAll("[^a-zA-Z]","").toLowerCase()}
       </defaultValue>
     </requiredProperty>
-    <requiredProperty key="modulePrefixClassName">
+    <requiredProperty key="moduleClassNamePrefix">
       <defaultValue>
         ${artifactId.replace("[^a-zA-Z]","").substring(0,1).toUpperCase()}${artifactId.replaceAll("[^a-zA-Z]","").substring(1)}
       </defaultValue>
@@ -77,6 +77,7 @@
           <directory>src/main/resources</directory>
           <includes>
             <include>**/*.properties</include>
+            <include>**/*.sql</include>
           </includes>
         </fileSet>
         <fileSet filtered="true" encoding="UTF-8">
@@ -85,18 +86,6 @@
             <include>**/*.xml</include>
           </includes>
         </fileSet>
-        <fileSet encoding="UTF-8">
-          <directory>src/main/resources</directory>
-          <includes>
-            <include>**/*.sql</include>
-          </includes>
-        </fileSet>
-        <fileSet filtered="true" packaged="true" encoding="UTF-8">
-          <directory>src/test/java</directory>
-          <includes>
-            <include>**/*.java</include>
-          </includes>
-        </fileSet>       
       </fileSets>
     </module>
     <module id="dashboard" dir="__rootArtifactId__-dashboard" name="${rootArtifactId}-dashboard">
@@ -120,14 +109,6 @@
             <include>**/*.xml</include>
           </includes>
         </fileSet>
-        <fileSet encoding="UTF-8">
-          <directory>src/main/webapp</directory>
-          <includes>
-            <include>**/*.css</include>
-            <include>**/*.styl</include>
-            <include>**/*.js</include>
-          </includes>
-        </fileSet>       
       </fileSets>
     </module>
   </modules>

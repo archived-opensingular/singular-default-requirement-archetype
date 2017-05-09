@@ -8,11 +8,11 @@ import org.junit.Test;
 import org.opensingular.flow.core.ProcessDefinition;
 import org.opensingular.server.commons.flow.FlowRenderTest;
 
-public class ${modulePrefixClassName}FlowRenderTest extends FlowRenderTest {
+public class ${moduleClassNamePrefix}FlowRenderTest extends FlowRenderTest {
 
     @Override
     protected ProcessDefinition<?> getInstanceToRender() {
-        return new ${modulePrefixClassName}Flow();
+        return new ${moduleClassNamePrefix}Flow();
     }
 
     @Ignore

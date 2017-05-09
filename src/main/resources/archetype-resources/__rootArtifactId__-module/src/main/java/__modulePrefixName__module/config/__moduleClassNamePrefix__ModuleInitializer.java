@@ -8,12 +8,12 @@ import org.opensingular.server.commons.spring.SingularDefaultPersistenceConfigur
 import org.opensingular.server.module.config.ModuleInitializer;
 
 
-public class ${modulePrefixClassName}ModuleInitializer extends ModuleInitializer {
+public class ${moduleClassNamePrefix}ModuleInitializer extends ModuleInitializer {
 
 
     @Override
     protected String processGroupCod() {
-        return "${moduleConstant}";
+        return "${moduleStringIDName}";
     }
 
     @Override
