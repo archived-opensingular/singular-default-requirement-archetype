@@ -37,7 +37,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jdk.version>1.8</jdk.version>
-        <singular.version>1.6.3-RC</singular.version>
+        <singular.version>1.6.3</singular.version>
         <wicket.version>7.1.0</wicket.version>
         <hibernate.version>4.3.11.Final</hibernate.version>
         <spring.version>4.2.4.RELEASE</spring.version>
