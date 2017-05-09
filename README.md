@@ -2,9 +2,8 @@
 
 Archetype para criação de novos projetos de requerimento utilizando o singular
 
-## como utilizar
+## como utilizar (maven central)
 
 ```shell
-mvn clean install
-mvn archetype:generate -DarchetypeGroupId=org.opensingular -DarchetypeArtifactId=singular-default-requirement-archetype
+ mvn archetype:generate -DarchetypeArtifactId=singular-default-requirement-archetype -DarchetypeGroupId=org.opensingular -DarchetypeVersion=1.6.3
 ```
