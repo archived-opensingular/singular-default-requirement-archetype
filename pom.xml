@@ -4,7 +4,7 @@
 
   <groupId>org.opensingular</groupId>
   <artifactId>singular-poc-requirement-archetype</artifactId>
-  <version>1.6.3</version>
+  <version>1.6.6</version>
   <packaging>maven-archetype</packaging>
 
   <name>singular-poc-requirement-archetype</name>
