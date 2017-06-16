@@ -13,29 +13,29 @@
                            http://www.springframework.org/schema/context
                            http://www.springframework.org/schema/context/spring-context.xsd">
     
+    <bean class="org.opensingular.lib.context.singleton.SpringBoundedSingletonStrategy" />
+	<bean class="org.opensingular.lib.support.spring.util.ApplicationContextProvider" />
+    
     <context:property-placeholder properties-ref="singularAdmin" />
     
     <import resource="conf/adminDefault.xml"/>
     <import resource="conf/security.xml"/>
 
-    <beans>
+    <bean id="singularFormConfig" class="org.opensingular.form.wicket.SingularFormConfigWicketImpl">
+        <property name="serviceRegistry" ref="springServiceRegistry"/>
+    </bean>
 
-        <bean id="singularFormConfig" class="org.opensingular.form.wicket.SingularFormConfigWicketImpl">
-            <property name="serviceRegistry" ref="springServiceRegistry"/>
-        </bean>
+    <bean id="springServiceRegistry" class="org.opensingular.form.spring.SpringServiceRegistry"/>
 
-	    <bean id="springServiceRegistry" class="org.opensingular.form.spring.SpringServiceRegistry"/>
+    <bean id="singularFormContext" class="org.opensingular.form.wicket.SingularFormContextWicketImpl"
+          factory-bean="singularFormConfig" factory-method="createContext">
+    </bean>
 
-        <bean id="singularFormContext" class="org.opensingular.form.wicket.SingularFormContextWicketImpl"
-              factory-bean="singularFormConfig" factory-method="createContext">
-        </bean>
-
-		<bean id="bamFilterformConfig" class="org.opensingular.form.spring.SpringFormConfig">
-			<!-- 
-	        <property name="typeLoader" ref="showcaseTypeLoader"/>
-	        <property name="documentFactory" ref="showcaseDatabaseDocumentFactory"/>
-	         -->
-		</bean>
-    </beans>
+	<bean id="bamFilterformConfig" class="org.opensingular.form.spring.SpringFormConfig">
+		<!-- 
+        <property name="typeLoader" ref="showcaseTypeLoader"/>
+        <property name="documentFactory" ref="showcaseDatabaseDocumentFactory"/>
+         -->
+	</bean>
 
 </beans>
