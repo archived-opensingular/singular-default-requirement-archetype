@@ -71,8 +71,8 @@ public class ${moduleClassNamePrefix}Flow extends ServerProcessDefinition<Proces
 
         builder.setStart(ANALISAR);
 
-        worklist(builder.from(ANALISAR).go("Aprovar", APROVADO));
-        worklist(builder.from(ANALISAR).go("Reprovar", REPROVADO));
+        builder.from(ANALISAR).go("Aprovar", APROVADO);
+        builder.from(ANALISAR).go("Reprovar", REPROVADO);
     }
 
 }
