@@ -39,16 +39,6 @@ public class ${moduleClassNamePrefix}Flow extends ServerProcessDefinition<Proces
         public String getName() {
             return taskName;
         }
-
-        @Override
-        public String getKey() {
-            return this.name();
-        }
-
-        @Override
-        public boolean isNameEquals(String name) {
-            return this.name().equals(name);
-        }
     }
 
     public ${moduleClassNamePrefix}Flow() {
