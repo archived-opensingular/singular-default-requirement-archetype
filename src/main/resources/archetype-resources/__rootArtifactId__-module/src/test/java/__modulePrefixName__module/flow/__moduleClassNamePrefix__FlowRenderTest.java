@@ -11,7 +11,7 @@ import org.opensingular.server.commons.flow.FlowRenderTest;
 public class ${moduleClassNamePrefix}FlowRenderTest extends FlowRenderTest {
 
     @Override
-    protected ProcessDefinition<?> getInstanceToRender() {
+    protected ProcessDefinition<?> getFlowDefinition() {
         return new ${moduleClassNamePrefix}Flow();
     }
 
