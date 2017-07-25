@@ -12,7 +12,7 @@ public class ${moduleClassNamePrefix}ModuleInitializer extends ModuleInitializer
 
 
     @Override
-    protected String processGroupCod() {
+    protected String moduleCod() {
         return "${moduleStringIDName}";
     }
 

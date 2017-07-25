@@ -7,11 +7,10 @@ import ${package}.${modulePrefixName}module.${moduleClassNamePrefix}Module;
 import org.opensingular.flow.core.DefinitionInfo;
 import org.opensingular.flow.core.ITaskDefinition;
 import org.opensingular.flow.core.FlowInstance;
-import org.opensingular.flow.core.defaults.NullTaskAccessStrategy;
-import org.opensingular.server.commons.flow.SingularServerTaskPageStrategy;
+import org.opensingular.flow.core.defaults.PermissiveTaskAccessStrategy;
 import org.opensingular.server.commons.flow.builder.RequirementFlowBuilder;
 import org.opensingular.server.commons.wicket.view.form.FormPage;
-import org.opensingular.server.p.commons.flow.definition.RequirementFlowDefinition;
+import org.opensingular.server.commons.flow.builder.RequirementFlowDefinition;
 
 import javax.annotation.Nonnull;
 
@@ -42,7 +41,7 @@ public class ${moduleClassNamePrefix}Flow extends RequirementFlowDefinition<Flow
     }
 
     public ${moduleClassNamePrefix}Flow() {
-        super(ProcessInstance.class);
+        super(FlowInstance.class);
         this.setName(${moduleClassNamePrefix}Module.${moduleStringIDName}, "${moduleClassNamePrefix}");
 
     }
@@ -51,9 +50,9 @@ public class ${moduleClassNamePrefix}Flow extends RequirementFlowDefinition<Flow
     @Override
     protected void buildFlow(@Nonnull RequirementFlowBuilder builder) {
 
-        builder.addPeopleTask(ANALISAR)
-                .addAccessStrategy(new NullTaskAccessStrategy())
-                .withExecutionPage(SingularServerTaskPageStrategy.of(FormPage.class));
+        builder.addHumanTask(ANALISAR)
+                .uiAccess(new PermissiveTaskAccessStrategy())
+                .withExecutionPage(FormPage.class);
 
         builder.addEndTask(REPROVADO);
         builder.addEndTask(APROVADO);

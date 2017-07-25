@@ -16,14 +16,14 @@
     <dependencies>
         <dependency>
             <groupId>org.opensingular</groupId>
-            <artifactId>singular-sso-desenv-petition</artifactId>
+            <artifactId>singular-sso-requirement</artifactId>
             <version>${singular.version}</version>
             <type>war</type>
         </dependency>
     </dependencies>
 
     <build>
-        <finalName>sso#petition</finalName>
+        <finalName>sso#requirement</finalName>
     </build>
 
 </project>
