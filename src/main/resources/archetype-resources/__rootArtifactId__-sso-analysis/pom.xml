@@ -16,7 +16,7 @@
     <dependencies>
         <dependency>
             <groupId>org.opensingular</groupId>
-            <artifactId>singular-sso-desenv-analysis</artifactId>
+            <artifactId>singular-sso-analysis</artifactId>
             <version>${singular.version}</version>
             <type>war</type>
         </dependency>

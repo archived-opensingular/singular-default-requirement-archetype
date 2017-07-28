@@ -55,7 +55,7 @@
         </fileSet>        
       </fileSets>
     </module>
-    <module id="${rootArtifactId}-sso-petition" dir="__rootArtifactId__-sso-petition" name="${rootArtifactId}-sso-petition">
+    <module id="${rootArtifactId}-sso-requirement" dir="__rootArtifactId__-sso-requirement" name="${rootArtifactId}-sso-requirement">
       <fileSets>
         <fileSet encoding="UTF-8">
           <directory>src/main/webapp</directory>
