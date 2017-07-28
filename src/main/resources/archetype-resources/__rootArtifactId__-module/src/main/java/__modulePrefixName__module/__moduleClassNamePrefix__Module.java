@@ -21,7 +21,7 @@ public class ${moduleClassNamePrefix}Module implements SingularModule {
     private             SingularRequirement ${modulePrefixName} = new FormFlowSingularRequirement("${moduleClassNamePrefix}", ${moduleClassNamePrefix}Form.class, ${moduleClassNamePrefix}Flow.class);
 
     @Override
-    public String category() {
+    public String abbreviation() {
         return ${moduleStringIDName};
     }
 
