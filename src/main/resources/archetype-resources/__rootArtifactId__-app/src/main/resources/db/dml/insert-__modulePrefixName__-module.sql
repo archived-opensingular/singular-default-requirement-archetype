@@ -5,7 +5,7 @@ INSERT INTO DBSINGULAR.TB_MODULO (CO_MODULO, NO_MODULO, URL_CONEXAO)  VALUES
 (
 '${moduleStringIDName}',
 '${moduleStringIDName}',
-'https://localhost:8443/${modulePrefixName}module/rest/flow'
+'https://localhost:8443/'
 );
 
 

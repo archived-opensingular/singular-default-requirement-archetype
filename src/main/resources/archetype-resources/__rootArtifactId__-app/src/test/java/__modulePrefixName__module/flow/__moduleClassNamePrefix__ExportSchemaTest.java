@@ -3,10 +3,8 @@
 #set( $symbol_escape = '\' )
 package ${package}.${modulePrefixName}module.flow;
 
-import org.junit.Ignore;
-import org.junit.Test;
-import org.opensingular.flow.core.ProcessDefinition;
-import org.opensingular.server.commons.flow.FlowRenderTest;
+import ${package}.${modulePrefixName}module.spring.${moduleClassNamePrefix}DatabaseConfigure;
+import org.opensingular.server.commons.test.SingularSchemaExportTest;
 
 public class ${moduleClassNamePrefix}ExportSchemaTest extends SingularSchemaExportTest {
 

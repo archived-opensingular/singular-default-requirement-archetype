@@ -3,30 +3,27 @@
 #set( $symbol_escape = '\' )
 package ${package}.${modulePrefixName}module.form;
 
+import javax.annotation.Nonnull;
+
 import org.opensingular.form.SIComposite;
 import org.opensingular.form.SInfoType;
 import org.opensingular.form.STypeComposite;
 import org.opensingular.form.TypeBuilder;
-import org.opensingular.form.type.core.STypeString;
 import org.opensingular.form.view.SViewByBlock;
 
 @SInfoType(spackage = ${moduleClassNamePrefix}Package.class, name = "${moduleClassNamePrefix}")
 public class ${moduleClassNamePrefix}Form extends STypeComposite<SIComposite> {
 
-    public STypeString nome;
+        public ${moduleClassNamePrefix}STBasicFields basicFields;
 
-    @Override
-    protected void onLoadType(TypeBuilder tb) {
-        this.asAtr().label("Formulário de Requerimento")
-                .displayString("Requerimento de ${symbol_dollar}{nome!}");
+        @Override
+        protected void onLoadType(@Nonnull TypeBuilder tb) {
+        asAtr().displayString("Nova Solicitação");
 
-        this.asAtrAnnotation().setAnnotated();
+        basicFields = addField("basicFields", ${moduleClassNamePrefix}STBasicFields.class);
 
-        nome = this.addFieldString("nome");
-
-        this.withView(new SViewByBlock(),
-                v -> v.newBlock("Dados Pessoais").add(nome));
-
-    }
+        this.withView(new SViewByBlock(), block ->
+            block.newBlock("Campos Básicos").add(basicFields));
+        }
 }
 
