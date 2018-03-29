@@ -16,6 +16,7 @@ import org.opensingular.form.type.core.STypeBoolean;
 import org.opensingular.form.type.core.STypeString;
 import org.opensingular.form.view.SViewByBlock;
 
+import static org.opensingular.form.util.SingularPredicates.typeValueIsTrueAndNotNull;
 
 @SInfoType(spackage = ${moduleClassNamePrefix}Package.class, name = "${moduleClassNamePrefix}")
 public class ${moduleClassNamePrefix}Form extends STypeComposite<SIComposite> {

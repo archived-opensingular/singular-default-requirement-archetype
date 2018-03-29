@@ -4,6 +4,7 @@
 package ${package}.${modulePrefixName}module.box;
 
 
+import static ${package}.${modulePrefixName}module.flow.${moduleClassNamePrefix}Flow.${moduleClassNamePrefix}Tasks.SOLICITACAO_COM_PENDENCIAS;
 import org.opensingular.lib.wicket.util.resource.DefaultIcons;
 import org.opensingular.server.commons.box.BoxItemData;
 import org.opensingular.server.commons.box.action.AbstractURLPopupBoxItemAction;
@@ -45,7 +46,7 @@ public class CaixaPendencia implements BoxDefinition {
 
 
             return new RequirementBoxItemDataProvider(Boolean.TRUE, actionProvider)
-                .addTask(CredenciamentoArFlow.Tasks.SOLICITACAO_COM_PENDENCIAS.getName());
+                .addTask(SOLICITACAO_COM_PENDENCIAS.getName());
         }
 
         @Override

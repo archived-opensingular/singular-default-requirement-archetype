@@ -50,7 +50,7 @@ public class ${moduleClassNamePrefix}Flow extends RequirementFlowDefinition<Flow
     }
 
     @Override
-    protected void buildFlow(@Nonnull RequirementFlowBuilder builder) {
+    protected void buildFlow(@Nonnull RequirementFlowBuilder flow) {
 
         flow.addHumanTask(ANALISAR)
         .uiAccess(new PermissiveTaskAccessStrategy()).withExecutionPage(FormPage.class);
