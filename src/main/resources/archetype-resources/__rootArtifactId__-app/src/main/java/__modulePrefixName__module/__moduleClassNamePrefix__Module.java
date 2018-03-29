@@ -5,6 +5,7 @@ package ${package}.${modulePrefixName}module;
 
 import ${package}.${modulePrefixName}module.flow.${moduleClassNamePrefix}Flow;
 import ${package}.${modulePrefixName}module.form.${moduleClassNamePrefix}Form;
+import ${package}.${modulePrefixName}module.box.CaixaPendencia;
 import org.opensingular.server.commons.requirement.SingularRequirement;
 import org.opensingular.server.module.RequirementConfiguration;
 import org.opensingular.server.module.SingularModule;
@@ -40,6 +41,7 @@ public class ${moduleClassNamePrefix}Module implements SingularModule {
     public void workspace(WorkspaceConfiguration config) {
         config
                 .addBox(new DefaultDraftbox()).newFor(${modulePrefixName})
+                .addBox(new CaixaPendencia())
                 .addBox(new DefaultInbox())
                 .addBox(new DefaultOngoingbox())
                 .addBox(new DefaultDonebox());

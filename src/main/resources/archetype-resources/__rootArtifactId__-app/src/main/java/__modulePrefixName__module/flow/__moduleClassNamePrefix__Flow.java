@@ -17,16 +17,19 @@ import javax.annotation.Nonnull;
 import static ${package}.${modulePrefixName}module.flow.${moduleClassNamePrefix}Flow.${moduleClassNamePrefix}Tasks.ANALISAR;
 import static ${package}.${modulePrefixName}module.flow.${moduleClassNamePrefix}Flow.${moduleClassNamePrefix}Tasks.APROVADO;
 import static ${package}.${modulePrefixName}module.flow.${moduleClassNamePrefix}Flow.${moduleClassNamePrefix}Tasks.REPROVADO;
-
+import static ${package}.${modulePrefixName}module.flow.${moduleClassNamePrefix}Flow.${moduleClassNamePrefix}Tasks.SOLICITACAO_COM_PENDENCIAS;
 
 @DefinitionInfo("${modulePrefixName}")
 public class ${moduleClassNamePrefix}Flow extends RequirementFlowDefinition<FlowInstance> {
+
+        public static final String CONCLUIR_PENDENCIA = "Concluir Pendência";
 
     public enum ${moduleClassNamePrefix}Tasks implements ITaskDefinition {
 
         ANALISAR("Analisar"),
         APROVADO("Aprovado"),
-        REPROVADO("Reprovado");
+        REPROVADO("Reprovado"),
+        SOLICITACAO_COM_PENDENCIAS("Solicitação com pendências");
 
         private String taskName;
 
@@ -49,18 +52,22 @@ public class ${moduleClassNamePrefix}Flow extends RequirementFlowDefinition<Flow
     @Override
     protected void buildFlow(@Nonnull RequirementFlowBuilder builder) {
 
-        builder.addHumanTask(ANALISAR)
-                .uiAccess(new PermissiveTaskAccessStrategy())
-                .withExecutionPage(FormPage.class);
+        flow.addHumanTask(ANALISAR)
+        .uiAccess(new PermissiveTaskAccessStrategy()).withExecutionPage(FormPage.class);
 
-        builder.addEndTask(REPROVADO);
-        builder.addEndTask(APROVADO);
+        flow.addHumanTask(SOLICITACAO_COM_PENDENCIAS).uiAccess(new PermissiveTaskAccessStrategy())
+        .withExecutionPage(FormPage.class);
 
+        flow.addEndTask(REPROVADO);
+        flow.addEndTask(APROVADO);
 
-        builder.setStartTask(ANALISAR);
+        flow.setStartTask(ANALISAR);
 
-        builder.from(ANALISAR).go("Aprovar", APROVADO);
-        builder.from(ANALISAR).go("Reprovar", REPROVADO);
+        flow.from(ANALISAR).go("Solicitar ajustes", SOLICITACAO_COM_PENDENCIAS);
+        flow.from(ANALISAR).go("Aprovar", APROVADO);
+        flow.from(ANALISAR).go("Reprovar", REPROVADO);
+
+        flow.from(SOLICITACAO_COM_PENDENCIAS).go(CONCLUIR_PENDENCIA, ANALISAR);
     }
 
 
