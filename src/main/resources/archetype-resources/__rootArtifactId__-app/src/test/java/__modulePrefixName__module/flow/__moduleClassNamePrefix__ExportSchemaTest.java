@@ -8,11 +8,11 @@ import org.opensingular.server.commons.test.SingularSchemaExportTest;
 
 public class ${moduleClassNamePrefix}ExportSchemaTest extends SingularSchemaExportTest {
 
-        @Override
-        public void generateScriptByDialect() {
-        ${moduleClassNamePrefix}DatabaseConfigure config = new ${moduleClassNamePrefix}DatabaseConfigure();
-            generateScript(null ,config.getHibernateDialect(), config.getScriptsPath());
-        }
+    @Override
+    public void generateScriptByDialect() {
+    ${moduleClassNamePrefix}DatabaseConfigure config = new ${moduleClassNamePrefix}DatabaseConfigure();
+        generateScript(null, null, config.getHibernateDialect(), config.getScriptsPath());
+    }
 }
 
 

@@ -17,6 +17,8 @@ public class ${moduleClassNamePrefix}DatabaseConfigure extends ConfigureDatabase
     @Value("classpath:db/dml/insert-${modulePrefixName}-module.sql")
     private Resource ${modulePrefixName}Module;
 
+        private final static String DDL_INSERT = "/db/ddl/create-${modulePrefixName}-actor.sql";
+        private final static String DML_INSERT = "/db/dml/insert-${modulePrefixName}-module.sql";
 
     @Override
     protected String getUrlConnection() {
@@ -29,10 +31,9 @@ public class ${moduleClassNamePrefix}DatabaseConfigure extends ConfigureDatabase
         return Oracle10gDialect.class;
     }
 
-
     @Override
     public List<String> getImportFiles(String... directoryAndFile) {
-        return super.getImportFiles("db/dml/insert-${modulePrefixName}-module.sql");
+        return super.getImportFiles(DDL_INSERT, DML_INSERT);
     }
 
 
