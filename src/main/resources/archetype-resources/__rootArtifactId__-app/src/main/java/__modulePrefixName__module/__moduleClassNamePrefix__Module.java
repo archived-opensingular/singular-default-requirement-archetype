@@ -6,15 +6,16 @@ package ${package}.${modulePrefixName}module;
 import ${package}.${modulePrefixName}module.flow.${moduleClassNamePrefix}Flow;
 import ${package}.${modulePrefixName}module.form.${moduleClassNamePrefix}Form;
 import ${package}.${modulePrefixName}module.box.${moduleClassNamePrefix}CaixaPendencia;
-import org.opensingular.server.commons.requirement.SingularRequirement;
-import org.opensingular.server.module.RequirementConfiguration;
-import org.opensingular.server.module.SingularModule;
-import org.opensingular.server.module.WorkspaceConfiguration;
-import org.opensingular.server.module.requirement.FormFlowSingularRequirement;
-import org.opensingular.server.module.workspace.DefaultDonebox;
-import org.opensingular.server.module.workspace.DefaultDraftbox;
-import org.opensingular.server.module.workspace.DefaultInbox;
-import org.opensingular.server.module.workspace.DefaultOngoingbox;
+
+import org.opensingular.requirement.commons.SingularRequirement;
+import org.opensingular.requirement.module.FormFlowSingularRequirement;
+import org.opensingular.requirement.module.RequirementConfiguration;
+import org.opensingular.requirement.module.SingularModule;
+import org.opensingular.requirement.module.WorkspaceConfiguration;
+import org.opensingular.requirement.module.workspace.DefaultDonebox;
+import org.opensingular.requirement.module.workspace.DefaultDraftbox;
+import org.opensingular.requirement.module.workspace.DefaultInbox;
+import org.opensingular.requirement.module.workspace.DefaultOngoingbox;
 
 public class ${moduleClassNamePrefix}Module implements SingularModule {
 

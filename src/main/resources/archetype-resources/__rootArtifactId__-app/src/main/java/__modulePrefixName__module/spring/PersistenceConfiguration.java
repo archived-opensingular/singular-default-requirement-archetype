@@ -3,8 +3,8 @@
 #set( $symbol_escape = '\' )
 package ${package}.${modulePrefixName}module.spring;
 
-import org.opensingular.server.commons.spring.ConfigureDatabaseResource;
-import org.opensingular.server.commons.spring.SingularDefaultPersistenceConfiguration;
+import org.opensingular.requirement.commons.spring.ConfigureDatabaseResource;
+import org.opensingular.requirement.commons.spring.SingularDefaultPersistenceConfiguration;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @EnableTransactionManagement(

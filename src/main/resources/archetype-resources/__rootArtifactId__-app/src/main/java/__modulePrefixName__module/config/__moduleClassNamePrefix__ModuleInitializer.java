@@ -4,11 +4,10 @@
 package ${package}.${modulePrefixName}module.config;
 
 import ${package}.${modulePrefixName}module.spring.PersistenceConfiguration;
-import org.opensingular.server.commons.spring.SingularDefaultPersistenceConfiguration;
-import org.opensingular.server.studio.init.ServerStudioAppInitializer;
+import org.opensingular.requirement.commons.spring.SingularDefaultPersistenceConfiguration;
+import org.opensingular.requirement.studio.init.RequirementStudioAppInitializer;
 
-
-public class ${moduleClassNamePrefix}ModuleInitializer implements ServerStudioAppInitializer {
+public class ${moduleClassNamePrefix}ModuleInitializer implements RequirementStudioAppInitializer {
 
     @Override
     public String moduleCod() {

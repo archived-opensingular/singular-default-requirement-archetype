@@ -6,17 +6,17 @@ package ${package}.${modulePrefixName}module.box;
 
 import static ${package}.${modulePrefixName}module.flow.${moduleClassNamePrefix}Flow.${moduleClassNamePrefix}Tasks.SOLICITACAO_COM_PENDENCIAS;
 import org.opensingular.lib.wicket.util.resource.DefaultIcons;
-import org.opensingular.server.commons.box.BoxItemData;
-import org.opensingular.server.commons.box.action.AbstractURLPopupBoxItemAction;
-import org.opensingular.server.commons.config.IServerContext;
-import org.opensingular.server.commons.config.PServerContext;
-import org.opensingular.server.commons.form.FormAction;
-import org.opensingular.server.commons.service.dto.DatatableField;
-import org.opensingular.server.commons.service.dto.ItemBox;
-import org.opensingular.server.module.ActionProviderBuilder;
-import org.opensingular.server.module.BoxItemDataProvider;
-import org.opensingular.server.module.provider.RequirementBoxItemDataProvider;
-import org.opensingular.server.module.workspace.BoxDefinition;
+import org.opensingular.requirement.commons.box.BoxItemData;
+import org.opensingular.requirement.commons.box.action.AbstractURLPopupBoxItemAction;
+import org.opensingular.requirement.commons.config.IServerContext;
+import org.opensingular.requirement.commons.config.PServerContext;
+import org.opensingular.requirement.commons.form.FormAction;
+import org.opensingular.requirement.commons.service.dto.DatatableField;
+import org.opensingular.requirement.commons.service.dto.ItemBox;
+import org.opensingular.requirement.module.ActionProviderBuilder;
+import org.opensingular.requirement.module.BoxItemDataProvider;
+import org.opensingular.requirement.module.provider.RequirementBoxItemDataProvider;
+import org.opensingular.requirement.module.workspace.BoxDefinition;
 
 import java.util.ArrayList;
 import java.util.List;

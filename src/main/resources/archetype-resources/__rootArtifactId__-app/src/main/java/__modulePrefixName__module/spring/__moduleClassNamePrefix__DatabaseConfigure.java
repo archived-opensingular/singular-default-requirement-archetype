@@ -8,7 +8,7 @@ import javax.annotation.Nonnull;
 
 import org.hibernate.dialect.Dialect;
 import org.hibernate.dialect.Oracle10gDialect;
-import org.opensingular.server.commons.spring.ConfigureDatabaseResource;
+import org.opensingular.requirement.commons.spring.ConfigureDatabaseResource;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 
