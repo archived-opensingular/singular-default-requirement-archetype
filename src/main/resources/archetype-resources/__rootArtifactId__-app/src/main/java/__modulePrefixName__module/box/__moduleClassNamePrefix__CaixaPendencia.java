@@ -21,7 +21,7 @@ import org.opensingular.server.module.workspace.BoxDefinition;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CaixaPendencia implements BoxDefinition {
+public class ${moduleClassNamePrefix}CaixaPendencia implements BoxDefinition {
 
         @Override
         public boolean appliesTo(IServerContext context) {
