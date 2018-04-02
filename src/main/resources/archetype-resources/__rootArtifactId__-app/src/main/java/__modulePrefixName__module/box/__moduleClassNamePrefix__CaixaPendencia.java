@@ -42,7 +42,8 @@ public class ${moduleClassNamePrefix}CaixaPendencia implements BoxDefinition {
 
         ActionProviderBuilder actionProvider = new ActionProviderBuilder()
             .addCustomActions((boxInfo, line, filter, list) -> list.addAction(new CumprirDiligenciaAction(line)))
-            .addViewAction();
+            .addViewAction()
+            .addHistoryAction();
 
 
             return new RequirementBoxItemDataProvider(Boolean.TRUE, actionProvider)
