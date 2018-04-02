@@ -14,21 +14,28 @@
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
-            <version>3.1.0</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.opensingular</groupId>
+                <artifactId>bom</artifactId>
+                <version>${singular.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <singular.version>1.7.1-SNAPSHOT</singular.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <singular.version>1.7.1-SNAPSHOT</singular.version>
-        <wicket.version>7.3.0</wicket.version>
-        <hibernate.version>4.3.11.Final</hibernate.version>
-        <spring.version>4.2.4.RELEASE</spring.version>
-        <spring.security.version>4.0.3.RELEASE</spring.security.version>
         <sonar.exclusions>**/*.js, **/*.css</sonar.exclusions>
         <failOnMissingWebXml>false</failOnMissingWebXml>
     </properties>
