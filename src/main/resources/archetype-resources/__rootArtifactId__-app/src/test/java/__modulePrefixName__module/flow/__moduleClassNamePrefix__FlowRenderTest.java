@@ -18,6 +18,3 @@ public class ${moduleClassNamePrefix}FlowRenderTest extends AbstractFlowRenderTe
         super.renderImage(new ${moduleClassNamePrefix}Flow());
     }
 }
-
-
-
