@@ -33,7 +33,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <singular.version>1.7.1-SNAPSHOT</singular.version>
+        <singular.version>1.8.0-RC2</singular.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <sonar.exclusions>**/*.js, **/*.css</sonar.exclusions>

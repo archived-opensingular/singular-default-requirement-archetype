@@ -24,7 +24,7 @@ import static ${package}.${modulePrefixName}module.flow.${moduleClassNamePrefix}
 @DefinitionInfo("${modulePrefixName}")
 public class ${moduleClassNamePrefix}Flow extends RequirementFlowDefinition<FlowInstance> {
 
-        public static final String CONCLUIR_PENDENCIA = "Concluir Pendência";
+    public static final String CONCLUIR_PENDENCIA = "Concluir Pendência";
 
     public enum ${moduleClassNamePrefix}Tasks implements ITaskDefinition {
 
@@ -55,10 +55,10 @@ public class ${moduleClassNamePrefix}Flow extends RequirementFlowDefinition<Flow
     protected void buildFlow(@Nonnull RequirementFlowBuilder flow) {
 
         flow.addHumanTask(ANALISAR)
-        .uiAccess(new PermissiveTaskAccessStrategy()).withExecutionPage(FormPage.class);
+                .uiAccess(new PermissiveTaskAccessStrategy()).withExecutionPage(FormPage.class);
 
         flow.addHumanTask(SOLICITACAO_COM_PENDENCIAS).uiAccess(new PermissiveTaskAccessStrategy())
-        .withExecutionPage(FormPage.class);
+                .withExecutionPage(FormPage.class);
 
         flow.addEndTask(REPROVADO);
         flow.addEndTask(APROVADO);

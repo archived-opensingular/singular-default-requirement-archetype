@@ -26,7 +26,7 @@ public class PersistenceConfiguration implements SingularPersistenceConfiguratio
 
     @Override
     public void configureHibernatePackagesToScan(List<String> packagesToScan) {
-    packagesToScan.add(${package});
+        packagesToScan.add("${package}");
     }
 
 }

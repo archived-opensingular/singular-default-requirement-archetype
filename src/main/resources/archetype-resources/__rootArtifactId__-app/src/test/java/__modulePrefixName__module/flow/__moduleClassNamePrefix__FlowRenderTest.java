@@ -10,7 +10,7 @@ import org.opensingular.requirement.commons.test.flow.AbstractFlowRenderTest;
 public class ${moduleClassNamePrefix}FlowRenderTest extends AbstractFlowRenderTest {
 
     public ${moduleClassNamePrefix}FlowRenderTest() {
-        setOpenGeneratedFiles(true);
+        setOpenGeneratedFiles(false);
     }
 
     @Test
