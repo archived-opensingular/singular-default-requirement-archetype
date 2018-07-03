@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <title>
-    ${moduleStringIDName} | Login
+    Singular | Login
     </title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -80,7 +80,7 @@
     2018 ©
     <a target="_blank" id="ownerLink7" href="http://www.opensingular.org"
        title="Soluções Inteligentes para criação de petição e análise.">
-        MMA.
+        Singular.
     </a>
 </div>
 

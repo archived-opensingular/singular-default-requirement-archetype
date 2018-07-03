@@ -47,7 +47,13 @@
             <include>**/*.xml</include>
             <include>**/*.html</include>
           </includes>
-        </fileSet>        
+        </fileSet>
+          <fileSet encoding="UTF-8">
+              <directory>src/main/webapp</directory>
+              <includes>
+                  <include>**/*.ftl</include>
+              </includes>
+          </fileSet>
       </fileSets>
     </module>
     <module id="${rootArtifactId}-static-resources" dir="__rootArtifactId__-static-resources" name="${rootArtifactId}-static-resources">
@@ -58,6 +64,9 @@
             <include>**/*.png</include>
           </includes>
         </fileSet>
+          <fileSet encoding="UTF-8">
+              <directory>src/main/sass</directory>
+          </fileSet>
       </fileSets>
     </module>
   </modules>
