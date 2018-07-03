@@ -24,8 +24,6 @@ import static ${package}.${modulePrefixName}module.flow.${moduleClassNamePrefix}
 @DefinitionInfo("${modulePrefixName}")
 public class ${moduleClassNamePrefix}Flow extends RequirementFlowDefinition<FlowInstance> {
 
-    public static final String CONCLUIR_PENDENCIA = "Concluir Pendência";
-
     public enum ${moduleClassNamePrefix}Tasks implements ITaskDefinition {
 
         ANALISAR("Analisar"),
@@ -69,7 +67,7 @@ public class ${moduleClassNamePrefix}Flow extends RequirementFlowDefinition<Flow
         flow.from(ANALISAR).go("Aprovar", APROVADO);
         flow.from(ANALISAR).go("Reprovar", REPROVADO);
 
-        flow.from(SOLICITACAO_COM_PENDENCIAS).go(CONCLUIR_PENDENCIA, ANALISAR);
+        flow.from(SOLICITACAO_COM_PENDENCIAS).go("Concluir Pendência", ANALISAR);
     }
 
 
