@@ -5,13 +5,11 @@ package ${package}.${modulePrefixName}module.spring;
 
 import org.hibernate.dialect.Dialect;
 import org.hibernate.dialect.Oracle10gDialect;
+import org.opensingular.app.commons.spring.persistence.database.PackageScanConfiguration;
 import org.opensingular.app.commons.spring.persistence.database.SingularPersistenceConfiguration;
 import java.util.List;
 
 public class PersistenceConfiguration implements SingularPersistenceConfiguration {
-
-    private final static String DDL_INSERT = "/db/ddl/create-${modulePrefixName}-actor.sql";
-    private final static String DML_INSERT = "/db/dml/insert-${modulePrefixName}-module.sql";
 
     @Override
     public Class<? extends Dialect> getHibernateDialect() {
@@ -19,14 +17,18 @@ public class PersistenceConfiguration implements SingularPersistenceConfiguratio
     }
 
     @Override
-    public void configureInitSQLScripts(List<String> scripts) {
-        scripts.add(DDL_INSERT);
-        scripts.add(DML_INSERT);
+    public String getActorTableScript() {
+        return "/db/ddl/create-${modulePrefixName}-actor.sql";
     }
-
+    
     @Override
-    public void configureHibernatePackagesToScan(List<String> packagesToScan) {
-        packagesToScan.add("${package}");
+    public void configureInitSQLScripts(List<String> scripts) {
+        scripts.add("/db/dml/insert-${modulePrefixName}-module.sql");
     }
 
+	@Override
+    public void configureHibernatePackagesToScan(PackageScanConfiguration packagesConfig) {
+        packagesConfig.addPackageToScan("${package}");
+    }
+    
 }
