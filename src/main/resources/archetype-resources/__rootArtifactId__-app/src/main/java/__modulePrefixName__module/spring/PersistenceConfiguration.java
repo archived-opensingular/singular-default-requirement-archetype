@@ -5,7 +5,6 @@ package ${package}.${modulePrefixName}module.spring;
 
 import org.hibernate.dialect.Dialect;
 import org.hibernate.dialect.Oracle10gDialect;
-import org.opensingular.app.commons.spring.persistence.database.PackageScanConfiguration;
 import org.opensingular.app.commons.spring.persistence.database.SingularPersistenceConfiguration;
 import java.util.List;
 
@@ -27,8 +26,8 @@ public class PersistenceConfiguration implements SingularPersistenceConfiguratio
     }
 
 	@Override
-    public void configureHibernatePackagesToScan(PackageScanConfiguration packagesConfig) {
-        packagesConfig.addPackageToScan("${package}");
+    public void configureHibernatePackagesToScan(List<String> list) {
+        list.add("${package}");
     }
     
 }

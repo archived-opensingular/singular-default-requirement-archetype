@@ -5,7 +5,7 @@
 
     <groupId>org.opensingular</groupId>
     <artifactId>singular-default-requirement-archetype</artifactId>
-    <version>1.8.0-RC2</version>
+    <version>1.8.0-RC3</version>
     <name>singular-default-requirement-archetype</name>
     <description>Singular server</description>
     <url>http://opensingular.org</url>
